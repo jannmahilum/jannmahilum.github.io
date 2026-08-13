@@ -1,291 +1,39 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- ==================================
-                   custom CSS
-    ==================================== -->
+    <meta name="description" content="J-ann Mahilum — Information Systems graduate and aspiring web developer." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- ==================================
-                   Remix Icons
-    ==================================== -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <title>Portfolio</title>
+    <title>J-ann Mahilum | Web Developer</title>
   </head>
   <body>
-    <!-- ==================================
-                    NAVBAR
-    ==================================== -->
-    <nav>
+    <nav class="navbar">
       <div class="container nav-container">
-        <a href="index.html" class="logo">PORT<span>FOLIO</span></a>
-        <ul class="navlist">
-          <li><a href="#home">home</a></li>
-          <li><a href="#about">about</a></li>
-          <li><a href="#skills">skills</a></li>
-          <li><a href="#certificate">certificate</a></li>
-          <li><a href="#contact">contact</a></li>
-        </ul>
-        <div class="nav-icons">
-          <div id="theme-btn" class="ri-moon-line"></div>
-          <div id="menu-btn" class="ri-menu-line"></div>
+        <a class="logo" href="#home">JM<span>.</span></a>
+        <div class="nav-links" id="nav-links">
+          <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a>
         </div>
+        <div class="nav-actions"><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">◐</button><button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">☰</button></div>
       </div>
     </nav>
-    <!-- ==================================
-                  HOME SECTION
-    ==================================== -->
-    <section class="home" id="home">
-      <div class="container home-container">
-        <div class="left">
-          <h3>Hello, It's Me</h3>
-          <h1><span>J-ann</span></h1>
-          <h3>And I'm an <span class="multiple-text"></span></h3>
-          <p>
-            A BSIS student with knowledge of technology and 
-            problem-solving. Eager to learn and apply my skills in information systems, programming, and data 
-            management. Looking for opportunities to gain 
-            experience and contribute to a team. 
-                      </p>
-          <div class="social-icons-container">
-            <div class="social-icons">
-              <a href="https://www.instagram.com/msm.zij" target="_blank" rel="noopener noreferrer">
-                <i class="ri-instagram-line"></i>
-              </a>
-              <a href="https://twitter.com/msmzij_" target="_blank" rel="noopener noreferrer">
-                <i class="ri-twitter-line"></i>
-              </a>
-              <a href="https://github.com/jannmahilum" target="_blank" rel="noopener noreferrer">
-                <i class="ri-github-line"></i>
-              </a>
-            </div>
-            <button class="btn overlay" id="btn" onclick="location.href='#contact';">
-              <span>Hire me</span>
-            </button>
-          </div>
-        </div>
-        <div class="right">
-          <img src="assets/images/about.png" alt="" />
-        </div>
-      </div>
-    </section>
-    <!-- ==================================
-                  ABOUT SECTION
-    ==================================== -->
-    <section class="about" id="about">
-      <div class="container about-container">
-        <div class="left">
-          <img src="assets/images/about.png" alt="About Me" />
-        </div>
-        <div class="right">
-          <div class="title">
-            <h2>About <span>Me</span></h2>
-          </div>
-          <h3>I'm a BSIS Student</h3>
-          <p>
-            A dedicated BSIS student with a solid foundation in technology and a
-            passion for problem-solving. Enthusiastic about learning and honing my
-            skills in information systems, programming, and data management. I aim
-            to leverage my abilities to contribute effectively to a team, gain
-            valuable hands-on experience, and grow as a professional in the tech
-            field.
-          </p>
-          <a href="assets/files/My_CV.pdf" download="My_CV.pdf">
-            <button class="btn overlay">
-              <span>Download CV</span>
-            </button>
-          </a>
-    
-          <div class="skills-container">
-            <div class="skill">
-              <h4>HTML</h4>
-              <div class="skill-bar">
-                <div class="skill-bar-filled" style="width: 50%;"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <h4>CSS</h4>
-              <div class="skill-bar">
-                <div class="skill-bar-filled" style="width: 60%;"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <h4>JavaScript</h4>
-              <div class="skill-bar">
-                <div class="skill-bar-filled" style="width: 40%;"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- ==================================
-                SKILLS SECTION
-    ==================================== -->
-    <section class="services" id="skills">
-      <div class="title">
-        <h2>My  <span>Skills</span></h2>
-      </div>
-      <div class="container services-container">
-        <div class="box overlay content-1">
-          <div class="content ">
-            <i class="ri-video-line"></i>
-            <h4>Video Editing</h4>
-           
-          </div>
-        </div>
-        <div class="box overlay content-1">
-          <div class="content ">
-            <i class="ri-voiceprint-fill"></i>
-            <h4>Persuasion</h4>
-            
-          </div>
-        </div>
-        <div class="box overlay content-1">
-          <div class="content ">
-            <i class="ri-tools-fill"></i>
-            <h4>Skills Management</h4>
-            
-          </div>
-          </div>
-          <div class="box overlay content-2">
-            <div class="content ">
-              <i class="ri-group-line"></i>
-              <h4>Teamwork</h4>
-             
-            </div>
-          </div>
-          <div class="box overlay content-2">
-            <div class="content ">
-              <i class="ri-chat-4-line"></i>
-              <h4>Communication</h4>
-             
-            </div>
-          </div>
-          <div class="box overlay content-2">
-            <div class="content ">
-              <i class="ri-image-edit-line"></i>
-              <h4>Photo Editing</h4>
-             
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-     <!-- ==================================
-                CERTIFICATE SECTION
-    ==================================== -->
-    <section class="portfolio" id="certificate">
-        <div class="title">
-            <h2>My <span>Certificate</span></h2>
-        </div>
-        <div class="container portfolio-container">
-            <div class="portfolio-buttons" >
-                <button class="btn portfolio-tab active" onclick="tabOpen('all')">
-                    All</button>
-                <button class="btn portfolio-tab " onclick="tabOpen('SOLOLEARN')">
-                    SOLOLEARN</button>
-                <button class="btn portfolio-tab " onclick="tabOpen('FREECODECAMP')">
-                    FREECODECAMP</button>
-                
-            </div>
-            <div class="tab-content active-content" id="all">
-                <div class="image"><img src="assets/images/sl1.jpg" alt=""></div>
-                <div class="image"><img src="assets/images/sl2.jpg" alt=""></div>
-                <div class="image"><img src="assets/images/sl3.jpg" alt=""></div>
-                <div class="image"><img src="assets/images/fcc.jpg" alt=""></div>
-            </div>
-            <div class="tab-content" id="SOLOLEARN">
-                <div class="image"><img src="assets/images/sl1.jpg" alt=""></div>
-                <div class="image"><img src="assets/images/sl2.jpg" alt=""></div>
-                <div class="image"><img src="assets/images/sl3.jpg" alt=""></div>
-            </div>
-            <div class="tab-content" id="FREECODECAMP">
-                <div class="image"><img src="assets/images/fcc.jpg" alt=""></div>
-            </div>
-          </div>
-        </div>
-    </section>
 
-   <!-- ==================================
-                CONTACT SECTION
-   ==================================== -->
-   <section class="contact" id="contact">
-    <div class="title">
-        <h2>Contact <span>Me</span></h2>
-    </div>
-    <div class="contact-content">
-        <div class="row">
-          <div class="box">
-              <div class="box-icon">
-                  <i class="ri-home-line"></i>
-              </div>
-              <div class="box-info">
-                  <h4>Address</h4>
-                  <span>Butuan City - Philippines</span>
-              </div>
-          </div>
-          <div class="box">
-              <div class="box-icon">
-                  <i class="ri-phone-line"></i>
-              </div>
-              <div class="box-info">
-                  <h4>Phone Number</h4>
-                  <span>+639070746691</span>
-              </div>
-          </div>
-          <div class="box">
-              <div class="box-icon">
-                  <i class="ri-mail-line"></i>
-              </div>
-              <div class="box-info">
-                  <h4>Email Address</h4>
-                  <span>mahilumjann57@gmail.com</span>
-              </div>
-          </div>
-        </div>
-        <div class="row">
-            <form action="" class="contact-form">
-                <div class="form-box">
-                    <input type="text" placeholder="Enter Your Name" required>
-                </div>
-                <div class="form-box">
-                    <input type="email" placeholder="Enter Your Email" required>
-                </div>
-                <div class="form-box">
-                    <input type="text" placeholder="Email Subject" required>
-                </div>
-                <div class="form-box">
-                    <textarea name="Message" id="" cols="10" rows="10" placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" class="btn overlay">
-                    <span>Send Message</span>
-                </button>
-            </form>
-        </div>
-    </div>
-   </section>
-   <div class="copyright">
-    <p>Copyright &copy; 2025 | All right Reserved.</p>
-   </div>
+    <main>
+      <section class="hero" id="home"><div class="container hero-container"><div class="hero-copy"><p class="eyebrow">Information Systems Graduate</p><h1>Hello! I’m <span>J-ann.</span></h1><h2>Junior Web Developer</h2><p>I’m a recent graduate interested in frontend, backend, and full-stack development. I enjoy creating responsive websites, learning new technologies, and solving practical problems through code.</p><div class="hero-buttons"><a class="button button-primary" href="#contact">Let’s connect</a><a class="button button-outline" href="assets/files/My_CV.pdf" download="MahilumCV.pdf">Download CV</a></div><div class="social-links"><a href="https://github.com/jannmahilum" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://ph.linkedin.com/in/j-ann-mahilum-765227366" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://www.upwork.com/freelancers/~01ea23fb326d807702" target="_blank" rel="noopener noreferrer">Upwork</a><a href="https://stackoverflow.com/users/32960906/j-ann-mahilum" target="_blank" rel="noopener noreferrer">Stack Overflow</a></div></div><div class="hero-image"><div class="image-wrap"><img src="assets/images/profile.png" alt="Portrait of J-ann Mahilum" /></div></div></div></section>
 
+      <section class="section" id="about"><div class="container about-grid"><div class="section-image"><img src="assets/images/profile.png" alt="Portrait of J-ann Mahilum" /></div><div class="section-copy"><p class="eyebrow">About me</p><h2>Focused on learning and building.</h2><p>I graduated with a degree in Information Systems and developed a foundation in programming, web development, databases, and information management through my coursework and projects.</p><p>I’m looking for an opportunity where I can contribute to a team, continue improving my technical skills, and grow into a reliable developer.</p><a class="text-link" href="assets/files/My_CV.pdf" download="MahilumCV.pdf">View my CV →</a></div></div></section>
 
-    <!-- ==================================
-                   Scroll Reveal
-    ==================================== -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- ==================================
-                   Typed Js
-    ==================================== -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- ==================================
-                   custom Js
-    ==================================== -->
+      <section class="section section-soft" id="skills"><div class="container"><div class="section-heading"><p class="eyebrow">What I work with</p><h2>Skills &amp; strengths</h2></div><div class="skills-grid"><article><span class="skill-icon">01</span><h3>Frontend</h3><div class="skill-logos" aria-label="Frontend technologies"><span title="HTML"><i class="devicon-html5-plain colored" aria-hidden="true"></i><small>HTML</small></span><span title="CSS"><i class="devicon-css3-plain colored" aria-hidden="true"></i><small>CSS</small></span><span title="JavaScript"><i class="devicon-javascript-plain colored" aria-hidden="true"></i><small>JavaScript</small></span><span title="TypeScript"><i class="devicon-typescript-plain colored" aria-hidden="true"></i><small>TypeScript</small></span><span title="React"><i class="devicon-react-original colored" aria-hidden="true"></i><small>React</small></span><span title="Vue.js"><i class="devicon-vuejs-plain colored" aria-hidden="true"></i><small>Vue</small></span><span title="Bootstrap"><i class="devicon-bootstrap-plain colored" aria-hidden="true"></i><small>Bootstrap</small></span><span title="Tailwind CSS"><i class="devicon-tailwindcss-plain colored" aria-hidden="true"></i><small>Tailwind</small></span></div></article><article><span class="skill-icon">02</span><h3>Backend foundations</h3><div class="skill-logos" aria-label="Backend technologies"><span title="Node.js"><i class="devicon-nodejs-plain colored" aria-hidden="true"></i><small>Node.js</small></span><span title="Express"><i class="devicon-express-original colored" aria-hidden="true"></i><small>Express</small></span><span title="Python"><i class="devicon-python-plain colored" aria-hidden="true"></i><small>Python</small></span><span title="PHP"><i class="devicon-php-plain colored" aria-hidden="true"></i><small>PHP</small></span><span title="MySQL"><i class="devicon-mysql-plain colored" aria-hidden="true"></i><small>MySQL</small></span><span title="PostgreSQL"><i class="devicon-postgresql-plain colored" aria-hidden="true"></i><small>PostgreSQL</small></span><span title="MongoDB"><i class="devicon-mongodb-plain colored" aria-hidden="true"></i><small>MongoDB</small></span><span title="Firebase"><i class="devicon-firebase-plain colored" aria-hidden="true"></i><small>Firebase</small></span></div></article><article><span class="skill-icon">03</span><h3>Tools &amp; technologies</h3><div class="tool-logos" aria-label="Tools and technologies"><span title="Git"><i class="devicon-git-plain colored" aria-hidden="true"></i><small>Git</small></span><span title="GitHub"><i class="devicon-github-original" aria-hidden="true"></i><small>GitHub</small></span><span title="Visual Studio Code"><i class="devicon-vscode-plain colored" aria-hidden="true"></i><small>VS Code</small></span><span title="Figma"><i class="devicon-figma-plain colored" aria-hidden="true"></i><small>Figma</small></span><span title="Vercel"><i class="devicon-vercel-original" aria-hidden="true"></i><small>Vercel</small></span><span title="npm"><i class="devicon-npm-original-wordmark colored" aria-hidden="true"></i><small>npm</small></span><span title="Postman"><i class="devicon-postman-plain colored" aria-hidden="true"></i><small>Postman</small></span><span title="Docker"><i class="devicon-docker-plain colored" aria-hidden="true"></i><small>Docker</small></span><span title="Netlify"><i class="devicon-netlify-plain colored" aria-hidden="true"></i><small>Netlify</small></span></div></article><article><span class="skill-icon">04</span><h3>Strengths</h3><div class="strength-list"><span>✦ Problem-solving</span><span>✦ Communication</span><span>✦ Teamwork</span><span>✦ Willingness to learn</span></div></article></div></div></section>
+
+      <section class="section" id="certificates"><div class="container"><div class="section-heading"><p class="eyebrow">Continuous learning</p><h2>Certificates</h2><p>Courses and certificates that support my foundation in web development.</p></div><div class="certificate-grid"><button class="certificate active" data-image="assets/images/sl1.jpg"><img src="assets/images/sl1.jpg" alt="SoloLearn certificate" /></button><button class="certificate" data-image="assets/images/sl2.jpg"><img src="assets/images/sl2.jpg" alt="SoloLearn certificate" /></button><button class="certificate" data-image="assets/images/sl3.jpg"><img src="assets/images/sl3.jpg" alt="SoloLearn certificate" /></button><button class="certificate" data-image="assets/images/fcc.jpg"><img src="assets/images/fcc.jpg" alt="freeCodeCamp certificate" /></button></div><div class="certificate-preview" id="certificate-preview"><img src="assets/images/sl1.jpg" alt="Selected certificate" /></div></div></section>
+
+      <section class="contact-section" id="contact"><div class="container contact-container"><div><p class="eyebrow">Get in touch</p><h2>Let’s talk about<br /><span>an opportunity.</span></h2><p>I’m open to junior developer roles, internships, and opportunities to learn with a supportive team.</p></div><div class="contact-details"><a href="mailto:mahilumjann57@gmail.com">mahilumjann57@gmail.com</a><a href="tel:+639070746691">+63 907 074 6691</a><span>Butuan City, Philippines</span></div></div></section>
+    </main>
+    <footer class="footer"><div class="container"><span>© 2026 J-ann Mahilum</span><a href="#home">Back to top ↑</a></div></footer>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
