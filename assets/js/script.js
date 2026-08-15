@@ -1,7 +1,31 @@
 const menuToggle = document.querySelector('#menu-toggle');
 const navLinks = document.querySelector('#nav-links');
 const themeToggle = document.querySelector('#theme-toggle');
+const contactForm = document.querySelector('#contact-form');
 
+contactForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const button = contactForm.querySelector('button[type="submit"]');
+  const originalText = button.textContent;
+  button.disabled = true;
+  button.textContent = 'Sending...';
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(contactForm),
+    });
+    const result = await response.json();
+    if (!result.success) throw new Error(result.message || 'Unable to send message');
+    contactForm.reset();
+    button.textContent = 'Message sent ✓';
+    setTimeout(() => { button.textContent = originalText; button.disabled = false; }, 4000);
+  } catch (error) {
+    button.textContent = 'Try again';
+    button.disabled = false;
+    window.alert('Your message could not be sent. Please try again or email me directly.');
+  }
+});
 const savedTheme = localStorage.getItem('portfolio-theme');
 if (savedTheme === 'dark') document.body.classList.add('dark');
 themeToggle.textContent = document.body.classList.contains('dark') ? '☼' : '◐';
